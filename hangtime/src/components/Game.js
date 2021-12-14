@@ -80,7 +80,7 @@ class Hangman extends Component {
           <img src={this.props.images[this.state.mistake]} alt=""/>
         </div>
         <div className="text-center">
-          <p>Guess the Programming Language:</p>
+          <p>Guess the Word:</p>
           <p>
             {!gameOver ? this.guessedWord() : this.state.answer}
           </p>
