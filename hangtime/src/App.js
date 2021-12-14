@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 
-import Game from '../components/Game.js';
+import Hangman from './components/Game.js';
 
 function App() {
   return (
     <div className="App">
-      <Game/>
+      <Hangman/>
     </div>
   );
 }

@@ -6,10 +6,19 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "cross-fetch": "^3.1.4",
+    "es6-promise": "^4.2.8",
+    "isomorphic-fetch": "^3.0.0",
+    "node-fetch": "^2.6.6",
+    "random-words": "^1.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "react-scripts": "^5.0.0",
+    "stream": "^0.0.2",
+    "timers": "^0.1.1",
+    "web-vitals": "^1.1.2",
+    "xhr2": "^0.2.1",
+    "xmlhttprequest": "^1.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +43,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "browser": {
+    "http": false,
+    "https": false
   }
 }
