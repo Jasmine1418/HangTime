@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './Game.css';
 import { randomWord } from './Words.js';
+import {Button} from "@material-ui/core/";
+//import { AuthContext } from "./utils/AuthProvider";
+import { currentUser, userLogin, userLogout } from "./Login.js";
+
 
 import step0 from "./images/0.jpeg";
 import step1 from "./images/1.jpeg";
@@ -24,6 +28,7 @@ class Hangman extends Component {
       answer: randomWord()
     }
   }
+
 
   handleGuess = e => {
     let letter = e.target.value;
@@ -75,6 +80,15 @@ class Hangman extends Component {
     return (
       <div className="Hangman container">
         <h1 className='text-center'>Hangman</h1>
+        {currentUser ? (
+          <Button color="blue" variant="contained" onClick={userLogout}>
+            Logout
+          </Button>
+        ) : (
+          <Button color="blue" variant="outlined" onClick={userLogin}>
+            Login
+          </Button>
+        )}
         <div className="float-right">Wrong Guesses: {this.state.mistake} of {this.props.maxWrong}</div>
         <div className="text-center">
           <img src={this.props.images[this.state.mistake]} alt=""/>
