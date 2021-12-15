@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Game.css';
 import { randomWord } from './Words.js';
-import {Button} from "@material-ui/core/";
+//import {Button} from "@material-ui/core/";
 //import { AuthContext } from "./utils/AuthProvider";
 import { currentUser, userLogin, userLogout } from "./Login.js";
 
@@ -43,7 +43,7 @@ class Hangman extends Component {
   }
 
   generateButtons() {
-    return "abcdefghjklmnopqrstuvwxyz".split("").map(letter => (
+    return "abcdefghijklmnopqrstuvwxyz".split("").map(letter => (
       <button
         class='btn btn-lg btn-primary m-2'
         key={letter}
@@ -79,7 +79,7 @@ class Hangman extends Component {
 
     return (
       <div className="Hangman container">
-        <h1 className='text-center'>Hangman</h1>
+        <h1 className='text-center'>HangTime</h1>
         {/* {currentUser ? (
           <Button color="blue" variant="contained" onClick={userLogout}>
             Logout
@@ -98,7 +98,7 @@ class Hangman extends Component {
           <p>
             {!gameOver ? this.guessedWord() : this.state.answer}
           </p>
-          <p>{gameStat}</p>
+          <p className="button">{gameStat}</p>
           <button className='btn btn-info' onClick={this.resetButton}>Reset</button>
         </div>
       </div>

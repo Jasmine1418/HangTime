@@ -2,17 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 
 import Game from './components/Game.js';
-import AuthProvider from './utils/AuthProvider';
-import UserLogin from './components/Login';
+//import AuthProvider from './utils/AuthProvider';
+//import UserLogin from './components/Login';
 
 function App() {
   return (
-    <AuthProvider>
+    // <AuthProvider>
       <div className="App">
-        <UserLogin/>
+        {/* <UserLogin/> */}
         <Game/>
       </div>
-    </AuthProvider>
+   // </AuthProvider>
   );
 }
 
