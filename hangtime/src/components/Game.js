@@ -80,7 +80,7 @@ class Hangman extends Component {
     return (
       <div className="Hangman container">
         <h1 className='text-center'>Hangman</h1>
-        {currentUser ? (
+        {/* {currentUser ? (
           <Button color="blue" variant="contained" onClick={userLogout}>
             Logout
           </Button>
@@ -88,7 +88,7 @@ class Hangman extends Component {
           <Button color="blue" variant="outlined" onClick={userLogin}>
             Login
           </Button>
-        )}
+        )} */}
         <div className="float-right">Wrong Guesses: {this.state.mistake} of {this.props.maxWrong}</div>
         <div className="text-center">
           <img src={this.props.images[this.state.mistake]} alt=""/>

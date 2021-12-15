@@ -1,9 +1,9 @@
-import { AuthContext} from "./utils/AuthProvider";
+import { AuthContext} from "../utils/AuthProvider";
 import { useContext } from "react";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from '@firebase/auth';
 
 function UserLogin(){
-    const { currentUser } = useContext(AuthContext);
+    const currentUser  = useContext(AuthContext);
 
     const userLogin = () => {
         const auth = getAuth();
@@ -24,9 +24,22 @@ function UserLogin(){
             console.log(error);
         });
     };
+    return(
+        <div>
+        {currentUser ? (
+            <Button color="blue" variant="contained" onClick={userLogout}>
+              Logout
+            </Button>
+          ) : (
+            <Button color="blue" variant="outlined" onClick={userLogin}>
+              Login
+            </Button>
+          )}
+        </div>
+    )
 }
     
-export 
+export default UserLogin;
 
 
 
