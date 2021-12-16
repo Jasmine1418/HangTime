@@ -74,7 +74,10 @@ class Hangman extends Component {
     }
 
     if (gameOver) {
-      gameStat = "You Lost!!!"
+      gameStat = <form> <label for="fname">Enter Name:</label>   <input type="text" id="fname" name="fname"/></form>;
+      
+                 
+                
     }
 
     return (
