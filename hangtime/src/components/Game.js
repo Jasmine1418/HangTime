@@ -3,7 +3,7 @@ import './Game.css';
 import { randomWord } from './Words.js';
 //import {Button} from "@material-ui/core/";
 //import { AuthContext } from "./utils/AuthProvider";
-import { currentUser, userLogin, userLogout } from "./Login.js";
+//import { currentUser, userLogin, userLogout } from "./Login.js";
 
 
 import step0 from "./images/0.jpeg";
